@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ .flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center; }
+.flex-container > div {
+
+  width: 100px;
+  margin: 10px;
+  color:blue;
+  text-align: center;
+  font-size: 10px;
+}
+.resume-style {
+
+  color:Green;
+  font-size: 30px;
+}
+.resume-style {
+
+  color:Green;
+  font-size: 30px;
+}
+.button-style {
+
+  color:blue;
+
+}
+
+</style>
+</head>
+<body>
+ <ul>
+    <h1 >Here is a log  of all resumes</h1>
+
+    {% for resume in all_resumes %}
+    <li>
+        <h1 class="resume-style" >{{ resume.name}}</h1>
+        <div class="flex-container">
+            <div> <a href="/resume/{{resume.id}}"> <button class="button-style" > SHOW RESUME </button> </a> </div>
+            <div> <a href="/resume/{{resume.id}}/education"> <button class="button-style"> ADD EDUCATION</button> </a> </div>
+            <div> <a href="/resume/{{resume.id}}/experience"> <button class="button-style"> ADD EXPERIENCE</button> </a> </div>
+            <div> <a href="/resume/{{resume.id}}/project"> <button class="button-style"> ADD PROJECT</button> </a> </div>
+            <div> <a href="/resume/{{resume.id}}/education/edit"> <button class="button-style"> EDIT EDUCATION</button> </a> </div>
+        </div>
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

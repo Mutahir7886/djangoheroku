@@ -1,0 +1,51 @@
+<font  size="10">{{bio_data.name}}</font>
+<br>
+<br>
+<strong style="color:black" size ="3">PHONE NO   :    </strong> <a> +{{bio_data.contact}} </a>
+<br>
+<strong style="color:black" size="3" >EMAIL-ID   :    </strong> <a> {{bio_data.email}}  </a>
+<br>
+<strong style="color:black" size ="3">ADDRESS    :     </strong> {{bio_data.Address}}    </a>
+
+<h1 style="font-size:25">Education </h1 >
+
+{% for item  in  bio_data.education_set.all %}
+      <strong> Institute Name :</strong> {{item.Institute_name}}
+       <br>
+      <strong> GPA:  </strong> <i> {{item.Marks_GPA}}</i>
+       <br>
+      <strong> Degree:   </strong> {{item.Degree}}
+       <br>
+       <br>
+    {% endfor %}
+
+<h1 style="font-size:25">Experience </h1>
+
+{% for item  in  bio_data.experience_set.all %}
+
+      <strong>Company Name:  </strong> {{item.company_name}}
+       <br>
+      <strong> Job Title:    </strong> {{item.job_title}}
+       <br>
+      <strong>Duration:  </strong> {{item.duration}}
+       <br>
+       <strong> Description:  </strong> {{item.description}}
+       <br>
+       <br>
+
+    {% endfor %}
+
+<h1 style="font-size:25"> Projects </h1>
+
+{% for item  in  bio_data.project_set.all %}
+
+       <strong>Name: </strong>{{item.name}}
+       <br>
+      <strong>Description: </strong> {{item.prjct_description}}
+       <br>
+       <br>
+
+
+    {% endfor %}
+
+

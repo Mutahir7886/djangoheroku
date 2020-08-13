@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .resume-style {
+
+  color:brown;
+  font-size: 25px;
+}
+    </style>
+</head>
+<body>
+<ul>
+    <h1 >Here is a log  of all resumes</h1>
+    {% for resume in all_resumes %}
+    <li><a class="resume-style" href="/resume/{{resume.id}}/view" >{{resume.name}}</a></li>
+    <br>
+        {% endfor %}
+
+</ul>
+</body>
+</html>

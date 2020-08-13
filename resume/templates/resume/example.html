@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!--#<style>-->
+<!-- .flex-container {-->
+<!--  display: flex;-->
+<!--  flex-direction: column;-->
+<!--  flex-wrap: wrap;-->
+<!--  justify-content: flex-start;-->
+<!--  align-items: flex-start; }-->
+<!--.flex-container > div {-->
+
+<!--  width: 100px;-->
+<!--  margin: 10px;-->
+<!--  color:blue;-->
+<!--  text-align: center;-->
+<!--  padding:5px;-->
+<!--  font-size: 50px;-->
+<!--}-->
+<!--.resume-style {-->
+
+<!--  color:Green;-->
+<!--  font-size: 40px;-->
+<!--}-->
+
+<!--.button-style {-->
+
+<!--  color:red;-->
+
+<!--</style>-->
+</head>
+<style>
+.resume-style {
+
+  color:green;
+  font-size: 50px;
+
+}
+.btn-primary
+{
+  background-color:yellow;
+  color:green;
+  font-size: 35px;
+
+}
+
+</style>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/resume/{{bio_data.id}}">{{ bio_data.name}}</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/resume/{{bio_data.id}}/education">ADD EDUCATION</a></li>
+      <li><a href="/resume/{{bio_data.id}}/experience">ADD EXPERIENCE</a></li>
+      <li><a href="/resume/{{bio_data.id}}/project">ADD PROJECT</a></li>
+      <li><a href="/resume/{{bio_data.id}}/education/edit">EDIT EDUCATION</a></li>
+      <li><a href="/resume/{{bio_data.id}}/experience/update">EDIT EXPERIENCE</a></li>
+      <li><a href="/resume/{{bio_data.id}}/project/update">ADD PROJECT</a></li>
+    </ul>
+  </div>
+</nav>
+        <h1 class="resume-style" >{{ bio_data.name}}</h1>
+        <br>
+<!--      #  <div class="flex-container">-->
+<!--            <div> <a href="/resume/{{bio_data.id}}"> <button class="button-style" > SHOW RESUME </button> </a> </div>-->
+<!--            <div> <a href="/resume/{{bio_data.id}}/education"> <button class="button-style"> ADD EDUCATION</button> </a> </div>-->
+<!--            <div> <a href="/resume/{{bio_data.id}}/experience"> <button class="button-style"> ADD EXPERIENCE</button> </a> </div>-->
+<!--            <div> <a href="/resume/{{bio_data.id}}/project"> <button class="button-style"> ADD PROJECT</button> </a> </div>-->
+<!--            <div> <a href="/resume/{{bio_data.id}}/education/update"> <button class="button-style"> EDIT EDUCATION</button> </a> </div>-->
+<!--        </div>-->
+
+<div class="btn-group-horizontal">
+  <a href="/resume/{{bio_data.id}}" class="btn btn-primary">SHOW RESUME</a>
+    <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle"data-toggle="dropdown">ADD PROPERTIES <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="/resume/{{bio_data.id}}/education">EDUCATION</a></li>
+      <li><a href="/resume/{{bio_data.id}}/experience">EXPERIENCE</a></li>
+      <li><a href="/resume/{{bio_data.id}}/project">PROJECT</a></li>
+    </ul>
+  </div>
+    <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">EDIT PROPERTIES <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="/resume/{{bio_data.id}}/education/edit">EDUCATION</a></li>
+      <li><a href="/resume/{{bio_data.id}}/experience/update">EXPERIENCE</a></li>
+      <li><a href="/resume/{{bio_data.id}}/project/update">PROJECT</a></li>
+    </ul>
+
+
+</div>
+</div>
+ </body>
+</html>
