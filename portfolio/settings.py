@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
-
+import corsheaders
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import whitenoise
 
@@ -27,7 +27,7 @@ SECRET_KEY = 'd(6m&b)_t0psoqot)=h@y#^8@t*sgz)*menox1+fj^bm=@&(y@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mutahiresumebuilder.herokuapp.com']
+ALLOWED_HOSTS = ['mutahirresumeappbuilder.herokuapp.com']
 
 # Application definition
 CORS_ORIGIN_ALLOW_ALL=True
