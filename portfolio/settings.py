@@ -27,7 +27,7 @@ SECRET_KEY = 'd(6m&b)_t0psoqot)=h@y#^8@t*sgz)*menox1+fj^bm=@&(y@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mutahirresumeappbuilder.herokuapp.com']
+ALLOWED_HOSTS = ['checkmyappresume.herokuapp.com']
 
 # Application definition
 CORS_ORIGIN_ALLOW_ALL=True
